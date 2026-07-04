@@ -1,0 +1,315 @@
+/*
+    Name: Fernando Contreras
+    Date: July 3, 2026
+    Assignment: 6.3 bioSite Development
+    Description: Main stylesheet for the Samira Felix bioSite project.
+    Covers atoms and molecules: colors, fonts, headings, layout,
+    navigation, cards, and footer styles.
+    Course: CSD 340 Web Development with HTML and CSS
+    Instructor: Professor Sue
+*/
+
+/* =====================
+   ATOMS: Colors & Base
+   ===================== */
+
+/* Color palette:
+   Pink (primary accent): #FFB3F0
+   Gold (secondary accent): #F2B731
+   Dark Blue (structure): #2371A0
+   Bright Blue (links): #2B77F8
+   Light Green (touches): #C1F2AC
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #2C2C2A;
+    background-color: #FFFFFF;
+}
+
+/* =====================
+   ATOMS: Typography
+   ===================== */
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #2371A0;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-size: 1.75em;
+    font-weight: 600;
+    color: #2C2C2A;
+}
+
+h3 {
+    font-size: 1.25em;
+    font-weight: 500;
+    color: #2C2C2A;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: 500;
+    color: #5F5E5A;
+}
+
+p {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.7;
+    max-width: 65ch;
+    margin-bottom: 16px;
+}
+
+/* =====================
+   ATOMS: Links
+   ===================== */
+
+a {
+    color: #2B77F8;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2371A0;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #7B5EA7;
+}
+
+/* =====================
+   ATOMS: Images
+   ===================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+figcaption {
+    font-size: 0.8em;
+    color: #888;
+    font-style: italic;
+    margin-top: 4px;
+    text-align: center;
+}
+
+/* =====================
+   ATOMS: Dividers
+   ===================== */
+
+hr {
+    border: none;
+    border-top: 1px solid #E0E0E0;
+    margin: 24px 0;
+}
+
+/* =====================
+   MOLECULES: Header
+   ===================== */
+
+header {
+    background-color: #2371A0;
+    color: white;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .site-name {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+header .site-name:hover {
+    color: #FFB3F0;
+}
+
+/* =====================
+   MOLECULES: Navigation
+   ===================== */
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95em;
+    font-weight: 500;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #FFB3F0;
+    color: #FFB3F0;
+    text-decoration: none;
+}
+
+nav a.active {
+    border-bottom: 2px solid #F2B731;
+    color: #F2B731;
+}
+
+/* =====================
+   MOLECULES: Hero Section
+   ===================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 60px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    border: 3px solid #FFB3F0;
+}
+
+.hero-text h1 {
+    margin-bottom: 8px;
+}
+
+.hero-text h2 {
+    color: #F2B731;
+    font-weight: 400;
+    font-size: 1.2em;
+    margin-bottom: 16px;
+}
+
+.hero-text p {
+    color: #5F5E5A;
+}
+
+/* =====================
+   MOLECULES: Cards
+   ===================== */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    color: #2371A0;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #5F5E5A;
+}
+
+/* =====================
+   MOLECULES: Section Headers
+   ===================== */
+
+.section-header {
+    text-align: center;
+    padding: 40px 40px 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-header h2 {
+    font-size: 2em;
+    color: #2371A0;
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    color: #888;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* =====================
+   MOLECULES: Footer
+   ===================== */
+
+footer {
+    background-color: #2371A0;
+    color: white;
+    text-align: center;
+    padding: 20px 40px;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 0.85em;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: none;
+    margin: 0;
+}
+
+footer a {
+    color: #FFB3F0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =====================
+   MOLECULES: Page Container
+   ===================== */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+}
