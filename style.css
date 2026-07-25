@@ -153,7 +153,10 @@ nav {
     gap: 24px;
 }
 
-nav a {
+/* Each rule names :visited too, so a nav link looks exactly the same
+   whether or not that page has already been visited. */
+nav a,
+nav a:visited {
     color: white;
     text-decoration: none;
     font-size: 0.95em;
@@ -162,13 +165,15 @@ nav a {
     border-bottom: 2px solid transparent;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:visited:hover {
     border-bottom: 2px solid #FFB3F0;
     color: #FFB3F0;
     text-decoration: none;
 }
 
-nav a.active {
+nav a.active,
+nav a.active:visited {
     border-bottom: 2px solid #F2B731;
     color: #F2B731;
 }
@@ -206,6 +211,29 @@ nav a.active {
 
 .hero-text p {
     color: #5F5E5A;
+}
+
+/* =====================
+   ATOMS: Buttons
+   ===================== */
+
+/* :visited is included so the button keeps its colors after being clicked. */
+.btn,
+.btn:visited {
+    display: inline-block;
+    background-color: #2371A0;
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn:hover,
+.btn:visited:hover {
+    background-color: #2B77F8;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 /* =====================
